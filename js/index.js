@@ -1,30 +1,4 @@
 
-
-const Navbar = document.getElementById('navbar');
-const sideBar = document.getElementById('side-bar');
-const mainContent = document.getElementById('main-content');
-
-const pageTop = 200;
-
-window.addEventListener('scroll', () => {
-    const pageYTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (pageYTop >= pageTop) {
-        Navbar.classList.add('active');
-        sideBar.classList.add('active');
-        // mainContent.classList.add('active');
-    } else {
-        Navbar.classList.remove('active');
-        sideBar.classList.remove('active');
-        // mainContent.classList.remove('active');
-    }
-
-    pageYTop = pageTop
-
-})
-
-
-
 // Siler Carosel
 let slideIndex = 0;
 const slideWrapper = document.getElementById('slide-wrapper');
@@ -93,46 +67,3 @@ function resetAutoPlay() {
 
 // Start everything
 startAutoPlay();
-
-
-
-// Grid column and row functionalities
-
-const grid = document.getElementById('grid');
-const cartGridFlex = document.querySelectorAll('.cart-grid-flex');
-const productCart = document.querySelectorAll('.product-cart');
-const productActiveDes = document.querySelectorAll('.product-active-description');
-const gridRow = document.getElementById('grid-row');
-const gridColumn = document.getElementById('grid-column');
-
-gridRow.addEventListener('click', () => {
-
-    cartGridFlex.forEach((item) => {
-        item.classList.add('active');
-    });
-
-    productCart.forEach((product) => {
-        product.classList.remove('active');
-    });
-
-    gridColumn.classList.remove('active');
-    gridRow.classList.add('active');
-    grid.classList.add('active');
-});
-
-gridColumn.addEventListener('click', () => {
-
-    cartGridFlex.forEach((item) => {
-        item.classList.remove('active');
-    });
-
-    productCart.forEach((product) => {
-        product.classList.remove('active');
-    });
-
-    gridColumn.classList.add('active');
-    gridRow.classList.remove('active');
-    grid.classList.remove('active');
-});
-
-
