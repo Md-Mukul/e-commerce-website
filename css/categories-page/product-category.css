@@ -102,6 +102,7 @@ a {
     color: var(--color-white);
     text-align: center;
     padding: .5rem 0;
+    width: 100%;
 
 }
 
@@ -166,7 +167,7 @@ a {
 
 /* Start Main */
 
-.category-pages-navigation{
+.category-pages-navigation {
     padding: .9rem 0rem;
     background-color: var(--discount-btn);
     color: var(--color-white);
@@ -454,7 +455,8 @@ h4.sub-title {
 .cart-price .btn-primary.cart-btn {
     margin-top: .8rem;
 }
-.cart-price .fa-star{
+
+.cart-price .fa-star {
     color: var(--color-review);
 }
 
@@ -468,8 +470,8 @@ h4.sub-title {
 }
 
 .cart-grid-flex.active .add-to-cart-btn {
-	top: 21px;
-	right: 5px;
+    top: 21px;
+    right: 5px;
 }
 
 .cart-header {
@@ -477,22 +479,24 @@ h4.sub-title {
     border-radius: 5px;
     width: 100%;
 }
-.cart-grid-flex.active .cart-header{
+
+.cart-grid-flex.active .cart-header {
     width: 40%;
 
-    
+
 }
-.cart-grid-flex.active .cart-header img{
+
+.cart-grid-flex.active .cart-header img {
     width: 100%;
     height: 100%;
-    
+
 }
 
 .cart-header img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    
+
 }
 
 .cart-header img:hover {
@@ -589,12 +593,14 @@ h4.sub-title {
     border-radius: 3px;
     font-weight: 400;
 }
+
 .cart-grid-flex.active .add-to-cart-btn:hover i span {
     display: block;
     left: 0%;
     transform: translateX(-65%) translateY(-250%);
 
 }
+
 .cart-grid-flex.active .add-to-cart-btn i span::after {
     right: 30%;
 
@@ -633,6 +639,8 @@ h4.sub-title {
 
     .banner-right {
         width: 100%;
+        background-color: red;
+        padding: 5px;
     }
 
     .banner {
@@ -660,11 +668,88 @@ h4.sub-title {
 
 
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .nav-list {
+        display: none;
+    }
+
+    .side-bar {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+
+    }
+
+    .banner-slider {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-right {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .example {
+        background: green;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .example {
+        background: blue;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .example {
+        background: orange;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .example {
+        background: pink;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 @media screen and (max-width: 950px) {
 
     .banner-slider {
         width: 100%;
     }
+
+    .banner-right {
+    width: 100%;
+}
 
     .banner-right {
         width: 100%;
@@ -686,9 +771,9 @@ h4.sub-title {
         display: grid;
         grid-template-columns: 1fr;
         gap: .8rem;
-    }
+    } */
 
-    /* .cart-grid-flex.active .add-to-cart-btn {
+/* .cart-grid-flex.active .add-to-cart-btn {
         top: 3px;
     } */
 
