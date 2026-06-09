@@ -692,9 +692,30 @@ h4.sub-title {
         height: auto;
     }
 
+    .main-contents {
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .main-content-aria {
+        width: 100%;
+        margin: 0;
+
+    }
+
     .banner-right {
         width: 100%;
     }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .8rem;
+    }
+    .product-list-header-items .product-list-header-item:not(:last-child){
+        display: none;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -779,4 +800,3 @@ h4.sub-title {
 
 
 
-}
