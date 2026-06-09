@@ -11,6 +11,7 @@
 
 body {
     background-color: rgb(247, 248, 248);
+
 }
 
 
@@ -19,6 +20,8 @@ body {
 :root {
     --color-bg: #e85d9e;
     --color-btn: #e85d9e;
+    --color-btn-hover: #eb4492;
+    --color-review: #feca27;
     --discount-btn: #ea98be;
     --color-white: #ffff;
     --color-border: rgb(225, 210, 210);
@@ -36,10 +39,12 @@ h3 {
 
 h1 {
     font-size: clamp(24px, 2.5vw, 50px);
+    
 }
 
 h2 {
     font-size: clamp(20px, 2vw, 36px);
+    font-weight: 500;
 }
 
 h3 {
@@ -94,15 +99,16 @@ a {
     cursor: pointer;
     font-family: var(--font-poppins);
 }
+.btn-primary:hover {
+    background-color: var(--color-btn-hover);
+}
 
 /* Banner Area */
 
 .banner {
     width: 100%;
     height: calc(100vh - 200px);
-    /* background-color: red; */
     overflow: hidden;
-    background-color: red;
 }
 
 .banner img {
@@ -171,12 +177,14 @@ a {
 .happy-custommer {
     display: flex;
     align-items: center;
-    gap: .5rem;
-    padding: 0 1rem;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    width: 100%;
 }
 
 .happy-custommer:not(:last-child) {
     border-right: 1px solid var(--color-border);
+    
 
 }
 
@@ -224,6 +232,11 @@ a {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+.curated-hader i:hover{
+    background-color: var(--discount-btn);
 }
 .curated-hader .view-more-btn{
     display: flex;
@@ -275,6 +288,7 @@ a {
     overflow: hidden;
     border-radius: 5px;
     width: 100%;
+    height: 250px;
 }
 
 .cart-header img {
@@ -382,3 +396,369 @@ a {
 /* end cart area */
 
 /* end curated-area */
+
+/* why-coose-area */
+.why-coose-area{
+    background-color: var(--color-white);
+}
+.why-coose-list, .why-choose-content{
+    display: flex;
+    gap: .7rem;
+    margin-top: .9rem;
+    align-items: center;
+
+}
+
+.why-coose-left{
+    width: 25%;
+}
+.why-coose-left h2{
+    margin-bottom: .8rem;
+}
+
+.why-coose-left button{
+    margin-top: 1.5rem;
+}
+.why-coose-list{
+    width: 75%;
+}
+
+.why-coose-list .happy-custommer{
+    flex-direction: column;
+    border: none;
+    padding: 5px;
+    justify-content: center;
+}
+.why-coose-list .happy-custommer p, .why-coose-list .happy-custommer b{
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.why-coose-list .happy-custommer b{
+    margin: .5rem 0;
+}
+/* end why-coose-area */
+
+
+
+/* Visible area */
+
+.visibles{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.visible-btn{
+    margin-top: 2rem;
+}
+.visible-left{
+    background-image: url("../images/after-before.jpg");
+    width: 65%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -90px;
+}
+.visible-right{
+    width: 35%;
+}
+.visible-right h2{
+    line-height: 40px;
+    padding: .5rem 0;
+}
+
+.visible-afer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+
+
+/* and Visible area */
+
+/* custommer sayes */
+
+
+.slider-wrapper {
+    position: relative;
+    width: 95%;
+    max-width: 1350px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+/* Slider Container Window */
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* বাইরের এক্সট্রা কার্ডগুলো হাইড রাখার জন্য */
+}
+
+/* The Moving Track */
+.testimonial-slider {
+    display: flex;
+    gap: 25px; /* প্রতিটি কার্ডের মাঝের গ্যাপ */
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Individual Card (Screenshot 2026-06-07 202649.png-এর মতো ডিজাইন) */
+.testimonial-card {
+    /* ডেসক্রিপশনে ৩টা দেখানোর জন্য হিসাব: (১০০% - মোট গ্যাপ) / ৩ */
+    min-width: calc((100% - 50px) / 3); 
+    background: #fcf9f6; /* হালকা অফ-হোয়াইট ব্যাকগ্রাউন্ড */
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Grid */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.profile-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name-stars {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stars {
+    color: #e67e22;
+    font-size: 0.8rem;
+}
+
+.name {
+    color: #cc8252; 
+    font-size: 1.45rem;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+}
+
+
+.quote-icon {
+    color: #f3c27a;
+    font-size: 3.5rem;
+    line-height: 0.7;
+    margin-top: 5px;
+}
+
+
+.testimonial-text {
+    color: #333333;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-btn); 
+    color: #ffffff;
+    border: none;
+    width: 35px;
+    height: 55px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    z-index: 10;
+    transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: var(--discount-btn);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+@media (max-width: 992px) {
+    .testimonial-card {
+        min-width: calc((100% - 25px) / 2);
+    }
+}
+
+
+@media (max-width: 650px) {
+    .testimonial-card {
+        min-width: 100%;
+    }
+    .slider-wrapper {
+        padding: 0 10px;
+    }
+    .nav-btn {
+        width: 30px;
+        height: 45px;
+    }
+}
+
+
+
+/* end custommer sayes */
+
+
+/* discount banner */
+
+.discount-banner{
+    width: 100%;
+    height: 250px;
+    
+    
+}
+.discount-banner-content{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 1.5rem;
+    justify-content: right;
+    background-image: url("../images/offer-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-right: 2.5rem;
+    
+    
+
+}
+.discount-content{
+    width: 35%;
+
+}
+.why-coose-left.discount-content h2{
+    margin: 0;
+    padding: 0;
+}
+.why-coose-left.discount-content p{
+    width: 95%;
+}
+
+.discount{
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-white);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+
+}
+.discount h2{
+    line-height: 25px;
+}
+/* end discount banner */
+
+
+/* Accordian Section */
+
+
+.accordion{
+    max-width:100%;
+
+}
+
+.accordion-item{
+    background:#fff;
+    margin-bottom:10px;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.accordion-header{
+    width:100%;
+    padding:18px 20px;
+    border:none;
+    background:#fff;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:18px;
+    font-weight:600;
+}
+
+.accordion-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease;
+}
+
+.accordion-content p{
+    padding:20px;
+    line-height:1.6;
+}
+
+.accordion-item.active .accordion-content{
+    max-height:200px;
+}
+
+.accordion-item.active .accordion-header span{
+    transform:rotate(45deg);
+}
+
+.accordion-header span{
+    font-size:24px;
+    transition:.3s;
+}
+
+
+/* End Accordian Section */
+
+
+.discount-banner._2{
+    height: auto;
+    padding: 2rem 0;
+    background-image: url("../images/offer-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.curated-hader.curated h2 {
+	line-height: 35px;
+	margin: .5rem 0;
+}
+
+.discount-lsit{
+    display: flex;
+    gap: 2rem;
+}
+
+.discount-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

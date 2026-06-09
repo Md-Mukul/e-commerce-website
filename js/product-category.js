@@ -19,9 +19,9 @@ window.addEventListener('scroll', () => {
         // mainContent.classList.remove('active');
     }
 
-    pageYTop = pageTop
+    pageYTop = pageTop;
 
-})
+});
 
 
 
@@ -134,5 +134,8 @@ gridColumn.addEventListener('click', () => {
     gridRow.classList.remove('active');
     grid.classList.remove('active');
 });
+
+
+
 
 

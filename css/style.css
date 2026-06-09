@@ -19,6 +19,7 @@ body {
 :root {
     --color-bg: #e85d9e;
     --color-btn: #e85d9e;
+    --color-review: #feca27;
     --discount-btn: #ea98be;
     --color-white: #ffff;
     --color-border: rgb(225, 210, 210);
@@ -27,7 +28,6 @@ body {
     --font-roboto: "Roboto Mono", monospace;
     --font-poppins: "Poppins", sans-serif;
 }
-
 h1,
 h2,
 h3 {
@@ -40,6 +40,7 @@ h1 {
 
 h2 {
     font-size: clamp(20px, 2vw, 36px);
+    font-weight: 500;
 }
 
 h3 {
