@@ -39,7 +39,7 @@ h3 {
 
 h1 {
     font-size: clamp(24px, 2.5vw, 50px);
-    
+
 }
 
 h2 {
@@ -55,7 +55,8 @@ h3 {
 h4 {
     font-weight: 400;
 }
-b{
+
+b {
     font-weight: 500;
 }
 
@@ -99,6 +100,7 @@ a {
     cursor: pointer;
     font-family: var(--font-poppins);
 }
+
 .btn-primary:hover {
     background-color: var(--color-btn-hover);
 }
@@ -184,7 +186,7 @@ a {
 
 .happy-custommer:not(:last-child) {
     border-right: 1px solid var(--color-border);
-    
+
 
 }
 
@@ -203,7 +205,8 @@ a {
     font-size: 1.5rem;
     color: var(--color-white);
 }
-.custommer-title h3{
+
+.custommer-title h3 {
     line-height: 14px;
 }
 
@@ -211,17 +214,18 @@ a {
 
 /* curated-area */
 
-.curated-kits{
+.curated-kits {
     margin: 2.5rem 0;
 }
 
 
-.curated-hader{
+.curated-hader {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-.curated-hader i{
+
+.curated-hader i {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -235,29 +239,34 @@ a {
     cursor: pointer;
     transition: .2s ease-in;
 }
-.curated-hader i:hover{
+
+.curated-hader i:hover {
     background-color: var(--discount-btn);
 }
-.curated-hader .view-more-btn{
+
+.curated-hader .view-more-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .6rem;
 }
 
-.grid.curated{
+.grid.curated {
     display: unset;
     display: flex;
     justify-content: space-between;
     gap: .8rem;
 }
-.grid.curated .product-cart:nth-child(1){
+
+.grid.curated .product-cart:nth-child(1) {
     width: 35%;
 }
-.grid.curated .product-cart:not(:first-child){
+
+.grid.curated .product-cart:not(:first-child) {
     width: calc(65%/3);
 }
-.grid.curated .product-cart:nth-child(1) img{
+
+.grid.curated .product-cart:nth-child(1) img {
     height: 266px;
 }
 
@@ -275,7 +284,8 @@ a {
 .cart-price .btn-primary.cart-btn {
     margin-top: .8rem;
 }
-.cart-price .fa-star{
+
+.cart-price .fa-star {
     color: var(--color-review);
 }
 
@@ -295,7 +305,7 @@ a {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    
+
 }
 
 .cart-header img:hover {
@@ -387,8 +397,7 @@ a {
     font-weight: 400;
 }
 
-.cart-price button
-{
+.cart-price button {
     width: 100%;
 }
 
@@ -398,10 +407,12 @@ a {
 /* end curated-area */
 
 /* why-coose-area */
-.why-coose-area{
+.why-coose-area {
     background-color: var(--color-white);
 }
-.why-coose-list, .why-choose-content{
+
+.why-coose-list,
+.why-choose-content {
     display: flex;
     gap: .7rem;
     margin-top: .9rem;
@@ -409,41 +420,47 @@ a {
 
 }
 
-.why-coose-left{
+.why-coose-left {
     width: 25%;
 }
-.why-coose-left h2{
+
+.why-coose-left h2 {
     margin-bottom: .8rem;
 }
 
-.why-coose-left button{
+.why-coose-left button {
     margin-top: 1.5rem;
 }
-.why-coose-list{
+
+.why-coose-list {
     width: 75%;
 }
 
-.why-coose-list .happy-custommer{
+.why-coose-list .happy-custommer {
     flex-direction: column;
     border: none;
     padding: 5px;
     justify-content: center;
 }
-.why-coose-list .happy-custommer p, .why-coose-list .happy-custommer b{
+
+.why-coose-list .happy-custommer p,
+.why-coose-list .happy-custommer b {
     text-align: center;
     width: 100%;
     display: block;
 }
-.why-coose-list .happy-custommer b{
+
+.why-coose-list .happy-custommer b {
     margin: .5rem 0;
 }
+
 /* end why-coose-area */
 
 
 
 /* Visible area */
 
-.visibles{
+.visibles {
     display: flex;
     height: 300px;
     width: 100%;
@@ -451,10 +468,12 @@ a {
     align-items: center;
     justify-content: center;
 }
-.visible-btn{
+
+.visible-btn {
     margin-top: 2rem;
 }
-.visible-left{
+
+.visible-left {
     background-image: url("../images/after-before.jpg");
     width: 65%;
     height: 100%;
@@ -462,15 +481,17 @@ a {
     background-size: cover;
     background-position: center -90px;
 }
-.visible-right{
+
+.visible-right {
     width: 35%;
 }
-.visible-right h2{
+
+.visible-right h2 {
     line-height: 40px;
     padding: .5rem 0;
 }
 
-.visible-afer{
+.visible-afer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -496,22 +517,22 @@ a {
 /* Slider Container Window */
 .slider-container {
     width: 100%;
-    overflow: hidden; /* বাইরের এক্সট্রা কার্ডগুলো হাইড রাখার জন্য */
+    overflow: hidden;
+
 }
 
 /* The Moving Track */
 .testimonial-slider {
     display: flex;
-    gap: 25px; /* প্রতিটি কার্ডের মাঝের গ্যাপ */
+    gap: 25px;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
 }
 
-/* Individual Card (Screenshot 2026-06-07 202649.png-এর মতো ডিজাইন) */
+
 .testimonial-card {
-    /* ডেসক্রিপশনে ৩টা দেখানোর জন্য হিসাব: (১০০% - মোট গ্যাপ) / ৩ */
-    min-width: calc((100% - 50px) / 3); 
-    background: #fcf9f6; /* হালকা অফ-হোয়াইট ব্যাকগ্রাউন্ড */
+    min-width: calc((100% - 50px) / 3);
+    background: #fcf9f6;
     padding: 30px;
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
@@ -552,7 +573,7 @@ a {
 }
 
 .name {
-    color: #cc8252; 
+    color: #cc8252;
     font-size: 1.45rem;
     font-weight: 400;
     font-family: 'Georgia', serif;
@@ -579,11 +600,11 @@ a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--color-btn); 
+    background-color: var(--color-btn);
     color: #ffffff;
     border: none;
     width: 35px;
-    height: 55px; 
+    height: 55px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -616,9 +637,11 @@ a {
     .testimonial-card {
         min-width: 100%;
     }
+
     .slider-wrapper {
         padding: 0 10px;
     }
+
     .nav-btn {
         width: 30px;
         height: 45px;
@@ -632,13 +655,14 @@ a {
 
 /* discount banner */
 
-.discount-banner{
+.discount-banner {
     width: 100%;
     height: 250px;
-    
-    
+
+
 }
-.discount-banner-content{
+
+.discount-banner-content {
     display: flex;
     align-items: center;
     height: 100%;
@@ -649,23 +673,26 @@ a {
     background-size: cover;
     position: relative;
     padding-right: 2.5rem;
-    
-    
+
+
 
 }
-.discount-content{
+
+.discount-content {
     width: 35%;
 
 }
-.why-coose-left.discount-content h2{
+
+.why-coose-left.discount-content h2 {
     margin: 0;
     padding: 0;
 }
-.why-coose-left.discount-content p{
+
+.why-coose-left.discount-content p {
     width: 95%;
 }
 
-.discount{
+.discount {
     width: 100px;
     height: 100px;
     background-color: var(--color-white);
@@ -677,87 +704,90 @@ a {
     border-radius: 50%;
 
 }
-.discount h2{
+
+.discount h2 {
     line-height: 25px;
 }
+
 /* end discount banner */
 
 
 /* Accordian Section */
 
 
-.accordion{
-    max-width:100%;
+.accordion {
+    max-width: 100%;
 
 }
 
-.accordion-item{
-    background:#fff;
-    margin-bottom:10px;
-    border-radius:6px;
-    overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+.accordion-item {
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
 }
 
-.accordion-header{
-    width:100%;
-    padding:18px 20px;
-    border:none;
-    background:#fff;
-    cursor:pointer;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:18px;
-    font-weight:600;
+.accordion-header {
+    width: 100%;
+    padding: 18px 20px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.accordion-content{
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .3s ease;
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
 }
 
-.accordion-content p{
-    padding:20px;
-    line-height:1.6;
+.accordion-content p {
+    padding: 20px;
+    line-height: 1.6;
 }
 
-.accordion-item.active .accordion-content{
-    max-height:200px;
+.accordion-item.active .accordion-content {
+    max-height: 200px;
 }
 
-.accordion-item.active .accordion-header span{
-    transform:rotate(45deg);
+.accordion-item.active .accordion-header span {
+    transform: rotate(45deg);
 }
 
-.accordion-header span{
-    font-size:24px;
-    transition:.3s;
+.accordion-header span {
+    font-size: 24px;
+    transition: .3s;
 }
 
 
 /* End Accordian Section */
 
 
-.discount-banner._2{
+.discount-banner._2 {
     height: auto;
     padding: 2rem 0;
     background-image: url("../images/offer-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .curated-hader.curated h2 {
-	line-height: 35px;
-	margin: .5rem 0;
+    line-height: 35px;
+    margin: .5rem 0;
 }
 
-.discount-lsit{
+.discount-lsit {
     display: flex;
     gap: 2rem;
 }
 
-.discount-item{
+.discount-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -765,28 +795,115 @@ a {
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  
-    
+/* ==========================================================================
+   1. Extra Small Devices (Mobile Portrait) - 0px to 480px
+   ========================================================================== */
+@media only screen and (max-width: 480px) {
+    .customer {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: -20px;
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    .grid.curated {
+        flex-wrap: wrap;
+    }
+
+    .happy-custommer:not(:last-child) {
+        border-right: unset;
+    }
+
+    .grid.curated {
+        flex-direction: column;
+        gap: .8rem;
+    }
+
+    .grid.curated .product-cart:nth-child(1) {
+        width: 100%;
+    }
+
+    .grid.curated .product-cart:not(:first-child) {
+        width: 100%;
+    }
+
+    .grid.curated .product-cart:nth-child(1) img {
+        height: 266px;
+    }
+
+    .why-coose-list,
+    .why-choose-content {
+        flex-direction: column;
+        gap: .7rem;
+        margin-top: .9rem;
+        align-items: center;
+
+    }
+
+    .why-coose-left {
+        width: 100%;
+    }
+
+    .visibles {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .visible-left {
+        width: 100%;
+        background-position: center;
+    }
+
+    .visible-right {
+        width: 100%;
+    }
+
+    .discount-banner-content {
+        flex-direction: column;
+        padding: .5rem;
+    }
+
+    .discount-lsit {
+        flex-direction: column;
+    }
+
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .example {background: green;}
+/* ==========================================================================
+   2. Small Devices (Mobile Landscape & Tablets) - 481px to 768px
+   ========================================================================== */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        /* আপনার কোড এখানে লিখুন */
+    }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .example {background: blue;}
-} 
+/* ==========================================================================
+   3. Medium Devices (Tablets Landscape & Small Laptops) - 769px to 1024px
+   ========================================================================== */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        /* আপনার কোড এখানে লিখুন */
+    }
+}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .example {background: orange;}
-} 
+/* ==========================================================================
+   4. Large Devices (Laptops & Desktops) - 1025px to 1200px
+   ========================================================================== */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        /* আপনার কোড এখানে লিখুন */
+    }
+}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .example {background: pink;}
+/* ==========================================================================
+   5. Extra Large Devices (Large Desktops/4K Monitors) - 1201px and above
+   ========================================================================== */
+@media only screen and (min-width: 1201px) {
+    body {
+        /* আপনার কোড এখানে লিখুন */
+    }
 }
