@@ -154,7 +154,11 @@ a {
     gap: 1.5rem;
 
 }
-
+.nav-list input {
+	border-radius: .3rem;
+	padding: .4rem;
+	border: 1px solid var(--color-bg);
+}
 .nav-link {
     font-size: 18px;
     color: black;
@@ -162,3 +166,105 @@ a {
 
 /* End Header Aria */
 
+
+/* Foote Area */
+
+.footer-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.footer-Shop .nav-list{
+    flex-direction: column;
+    align-items: start;
+    gap: unset;
+}
+.footer-Shop h2{
+    font-size: 18px;
+    margin-bottom: .5rem;
+}
+.footer-Shop a{
+    font-size: 14px;
+    display: inline-flex;
+    transition: .2s ease-in-out;
+}
+.footer-Shop a:hover{
+    text-decoration: underline;
+    transform: translateX(2px);
+}
+
+.footer-logo{
+    width: calc(100% / 5);
+}
+.footer-logo a{
+    margin-bottom: .5rem;
+    display: inline-flex;
+}
+.footer-logo p{
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.footer-content i{
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-white);
+    transition: .2s ease-in-out;
+    padding: 15px;
+}
+.footer-content i:hover{
+    transform: translateX(2px);
+    
+}
+.footer-Shop:nth-last-child(1){
+width: calc(100% / 4);
+}
+.footer-Shop:nth-last-child(1) p{
+font-size: 14px;
+}
+
+.subscribe{
+    box-sizing: border-box;
+    padding: .5rem;
+}
+.subscribe{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.subscribe input{
+    border: 1px solid var(--discount-btn);
+    padding: .5rem .5rem;
+    border-radius: .3rem;
+    width: 60%;
+}
+
+.footer-end{
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-border);
+}
+.footer-end a{
+    color: black;
+}
+.end-list{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.end-list .end-items:not(:last-child){
+    border-right: 1px solid var(--color-border);
+    padding-right: 3.5rem;
+}
+
+
+/* End Foote Area */
