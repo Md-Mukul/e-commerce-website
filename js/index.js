@@ -72,86 +72,59 @@ startAutoPlay();
 
 // custommer sayes
 
-const testimonialSlider = document.getElementById('testimonial-slider');
+
+const sliderContainer = document.querySelector('.slider-container');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const cards = document.querySelectorAll('.testimonial-card');
 
-let currentIndex = 0;
-const totalCards = cards.length;
-
-// console.log(totalCards)
-
-// স্ক্রিন সাইজের ওপর ভিত্তি করে কয়টি কার্ড একসাথে স্ক্রিনে থাকবে তা নির্ধারণ করা
-function getCardsPerView() {
-    if (window.innerWidth <= 650) return 1;
-    if (window.innerWidth <= 992) return 2;
-    return 3; // ল্যাপটপ বা বড় স্ক্রিনের জন্য ৩টি
-}
-
-function updateSliderPosition() {
-    const cardsPerView = getCardsPerView();
-    console.log("CardPreview",cardsPerView)
-    const maxIndex = totalCards - cardsPerView;
-        console.log("maxIndex",maxIndex)
-    
-    // বাউন্ডারি চেক (সীমার বাইরে যেতে দিবে না)
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-    if (currentIndex < 0) currentIndex = 0;
-
-    // স্লাইড মুভ করার হিসাব
-    const cardWidthWithGap = 100 / cardsPerView; 
-    testimonialSlider.style.transform = `translateX(-${currentIndex * cardWidthWithGap}%)`;
-
-    // ---- বাটন অ্যাক্টিভ/ডিসঅ্যাক্টিভ করার লজিক ----
-    
-    // ১. একদম শুরুতে থাকলে Prev বাটন কাজ করবে না এবং হালকা আবছা (disabled) দেখাবে
-    if (currentIndex === 0) {
-        prevBtn.style.opacity = "0.2";
-        prevBtn.style.pointerEvents = "none"; // ক্লিক ইভেন্ট বন্ধ
-        prevBtn.style.cursor = "not-allowed";
-    } else {
-        prevBtn.style.opacity = "1";
-        prevBtn.style.pointerEvents = "auto"; // ক্লিক ইভেন্ট চালু
-        prevBtn.style.cursor = "pointer";
-    }
-
-    // ২. একদম শেষে পৌছালে Next বাটন কাজ করবে না এবং হালকা আবছা (disabled) দেখাবে
-    if (currentIndex === maxIndex) {
-        nextBtn.style.opacity = "0.2";
-        nextBtn.style.pointerEvents = "none"; // ক্লিক ইভেন্ট বন্ধ
-        nextBtn.style.cursor = "not-allowed";
-    } else {
-        nextBtn.style.opacity = "1";
-        nextBtn.style.pointerEvents = "auto"; // ক্লিক ইভেন্ট চালু
-        nextBtn.style.cursor = "pointer";
-    }
-}
-
-// Next বাটনের ক্লিকের কাজ
+// Button scroll
 nextBtn.addEventListener('click', () => {
-    const cardsPerView = getCardsPerView();
-    // শেষ সীমার আগ পর্যন্ত ১ ঘর করে সামনে যাবে
-    if (currentIndex < totalCards - cardsPerView) {
-        currentIndex++;
-        updateSliderPosition();
-    }
+    sliderContainer.scrollBy({
+        left: 350,
+        behavior: 'smooth'
+    });
 });
 
-// Prev বাটনের ক্লিকের কাজ
 prevBtn.addEventListener('click', () => {
-    // প্রথম সীমার আগ পর্যন্ত ১ ঘর করে পিছনে যাবে
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSliderPosition();
-    }
+    sliderContainer.scrollBy({
+        left: -350,
+        behavior: 'smooth'
+    });
 });
 
-// উইন্ডো রিসাইজ করলে স্লাইডারের পজিশন ঠিক রাখা
-window.addEventListener('resize', updateSliderPosition);
+// Mouse drag
+let isDown = false;
+let startX;
+let scrollLeft;
 
-// শুরুতে স্লাইডার পজিশন সেট করা
-updateSliderPosition();
+sliderContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    sliderContainer.style.cursor = 'grabbing';
+
+    startX = e.pageX - sliderContainer.offsetLeft;
+    scrollLeft = sliderContainer.scrollLeft;
+});
+
+sliderContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+    sliderContainer.style.cursor = 'grab';
+});
+
+sliderContainer.addEventListener('mouseup', () => {
+    isDown = false;
+    sliderContainer.style.cursor = 'grab';
+});
+
+sliderContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+
+    e.preventDefault();
+
+    const x = e.pageX - sliderContainer.offsetLeft;
+    const walk = (x - startX) * 2;
+
+    sliderContainer.scrollLeft = scrollLeft - walk;
+});
 
 // end custommer sayes
 

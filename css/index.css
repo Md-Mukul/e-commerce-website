@@ -504,7 +504,25 @@ a {
 
 /* custommer sayes */
 
+.slider-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
 
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 20px;
+}
+
+.slider-container:active {
+    cursor: grabbing;
+}
 .slider-wrapper {
     position: relative;
     width: 95%;
@@ -861,13 +879,49 @@ a {
         width: 100%;
     }
 
+
     .discount-banner-content {
+        position: relative;
+        padding: 2.5rem;
+    }
+
+    .discount-banner-content.content_2 {
         flex-direction: column;
-        padding: .5rem;
+
+    }
+
+
+    .discount {
+        position: absolute;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .discount-banner {
+        height: auto;
     }
 
     .discount-lsit {
         flex-direction: column;
+    }
+
+    .curated-kits b {
+        font-size: 15px;
+    }
+
+    .visible-left {
+        height: 180px;
+    }
+
+    .visible-afer {
+        padding: .3rem;
+    }
+
+    .visible-afer .btn-primary {
+        padding: .1rem .5rem;
+        border-radius: 2px;
+        font-size: 12px;
     }
 
 }

@@ -167,6 +167,18 @@ a {
     color: black;
 }
 
+
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+}
+.mobille-list-content{
+    display: none;
+}
+
+/* end Mobile Menu */
+
 /* End Header Aria */
 
 
@@ -316,7 +328,7 @@ a {
         font-size: 18px;
     }
 
-    .nav-list {
+    .nav-list.lg {
         display: none;
 
     }
@@ -325,7 +337,6 @@ a {
         display: flex;
         align-items: center;
         gap: .5rem;
-
     }
 
     .search-form {
@@ -382,6 +393,7 @@ a {
 
 
     .mobille-list-content {
+        display: block;
         background-color: #f1f6f1;
         height: 100vh;
         position: absolute;
@@ -428,6 +440,11 @@ a {
         width: 100%;
     }
 
+    .end-list .end-items:not(:last-child) {
+        border: none;
+        padding: 0;
+    }
+
     .footer-Shop:nth-last-child(1) {
         width: 100%;
     }
@@ -435,6 +452,7 @@ a {
     .end-list {
         display: unset;
     }
+
 
 }
 
