@@ -1,0 +1,24 @@
+.curated-hader .view-more-btn {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.curated-hader i {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-btn);
+    color: var(--color-white);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.curated-hader i:hover {
+    background-color: var(--discount-btn);
+}
